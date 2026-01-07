@@ -1,8 +1,11 @@
+import BlogList from "./BlogList";
+import BlogLoader from "./BlogLoader";
+
 const Home = () => {
   return (
-    <div className="text-center text-2xl font-semibold">
-      Home page is working 
-    </div>
+    <BlogLoader>
+        <BlogList />
+    </BlogLoader>
   );
 };
 

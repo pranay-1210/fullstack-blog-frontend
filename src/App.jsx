@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ExampleProvider } from "./store/BlogContext";
+import { BlogProvider } from "./store/BlogContext";
+
 
 import Home from "./components/Home";
 import CreateBlog from "./components/CreateBlog";
