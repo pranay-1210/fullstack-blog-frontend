@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ExampleProvider } from "./store/ExampleContext";
+import { ExampleProvider } from "./store/BlogContext";
 
 import Home from "./components/Home";
 import CreateBlog from "./components/CreateBlog";
@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <BrowserRouter>
-      <ExampleProvider>
+      <BlogProvider>
         <NavBar />
 
         {/* Main content area */}
@@ -21,7 +21,7 @@ function App() {
           </div>
         </main>
 
-      </ExampleProvider>
+      </BlogProvider>
     </BrowserRouter>
   );
 }

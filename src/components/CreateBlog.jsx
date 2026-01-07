@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { BlogContext } from "../store/BlogContext";
 
 const CreateBlog = () => {
+  const {addBlog} = useContext(BlogContext);
   const titleRef = useRef();
   const contentRef = useRef();
   const authorRef = useRef();
@@ -27,7 +29,7 @@ const CreateBlog = () => {
     })
       .then((res) => res.json())
       .then((resJson) => {
-        console.log(resJson.blog);
+        addBlog(resJson.blog);
         titleRef.current.value = "";
         contentRef.current.value = "";
         authorRef.current.value = "";
